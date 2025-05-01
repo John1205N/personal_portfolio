@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Samuel | Web Developer Portfolio</title>
+    
+        <!-- Boxicons CDN -->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+        <!-- Preconnect for Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="loader"></div>
+</div>
+
+
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><span>J</span>OHN</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="home-content">
+                <div class="text-content">
+                    <span class="tagline">Aspiring Web Developer</span>
+                    <h1>I'm John <span id="typing-text">Samuel</span></h1>
+                    <p id="dynamic-heading">A web developer designs, builds, and maintains websites using languages like HTML, CSS, and JavaScript. They specialize 
+                        in front-end, back-end, or full-stack development to ensure functionality and user experience.</p>
+                    <div class="cta-buttons">
+                        <a href="assets/John CV R.pdf" class="btn primary-btn" download>Download CV</a>
+                        <a href="hire.html" target="_blank" class="btn secondary-btn">Let's Work Together</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <script>
+        const words = ["Samuel"];
+        const typingSpeed = 200;
+        const erasingSpeed = 60;
+        const typingDelay = 1000;  // pause after typing
+        const erasingDelay = 500;  // pause before re-typing
+      
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+      
+        function typeEffect() {
+          const currentWord = words[wordIndex];
+          const element = document.getElementById("typing-text");
+      
+          if (isDeleting) {
+            if (charIndex > 0) {
+              element.innerHTML = currentWord.substring(0, charIndex - 1);
+              charIndex--;
+              setTimeout(typeEffect, erasingSpeed);
+            } else {
+              isDeleting = false;
+              wordIndex = (wordIndex + 1) % words.length;
+              setTimeout(typeEffect, erasingDelay);
+            }
+          } else {
+            if (charIndex <= currentWord.length) {
+              element.innerHTML = currentWord.substring(0, charIndex);
+              charIndex++;
+              setTimeout(typeEffect, typingSpeed);
+            } else {
+              isDeleting = true;
+              setTimeout(typeEffect, typingDelay);
+            }
+          }
+        }
+      
+        window.addEventListener("DOMContentLoaded", typeEffect);
+      </script>
+      
+      <section class="about" id="about">
+        <h1><span>A</span>bout Me</h1>
+        <div class="about-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Front Side (Now showing the back details) -->
+                    <div class="flip-card-front">
+                        <img src="assets/Profile pic.jpg" alt="">
+                        <h3><span>J</span>ohn Samuel</h3>
+                        <p>johnpeter3735@gmail.com</p>
+                        <p>+91 81488 55286</p>
+                        <div class="social">
+                            <a href="https://github.com/John1205N" target="_blank"><i class="bx bxl-github"></i></a>
+                            <a href="https://www.linkedin.com/in/johnsamuel12/" target="_blank">
+                                <i class="bx bxl-linkedin"></i></a>
+                            <a href="https://www.instagram.com/john__peter12?igsh=MXU5enkxbWVzdW96dg==" target="_blank "> <i class="bx bxl-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+            <!-- About Content -->
+            <div class="about-content">
+                <p>
+                    I'm <strong>John Samuel</strong>, a <strong>BCA graduate (2024)</strong> with hands-on skills in 
+                    <strong>HTML, CSS, JavaScript, Python, MySQL, and Excel</strong>. Currently, I'm actively seeking 
+                    <strong>full-time opportunities in the IT industry</strong> where I can contribute my skills, 
+                    learn continuously, and grow as a developer. When I'm not coding, I enjoy exploring 
+                    <strong>new tech trends</strong> and working on <strong>personal projects</strong> to sharpen my skills.
+                </p>
+                
+    
+                <!-- Skills Section -->
+                <div class="skills">
+                    <h3><span>S</span>kills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">PHP</div>
+                        <div class="skill-item">MySQL</div>
+                        <div class="skill-item">Git & GitHub</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="edu-container" id="education">
+    <h1><span>Q</span>ualification</h1>
+    <div class="row">
+        <!-- Left Side: Education -->
+        <div class="col">
+            <h2><span>E</span>ducation</h2>
+
+            <div class="contents">
+                <div class="box">
+                    <h4>2021 - 2024</h4>
+                    <h3>Nallamuthu Gounder Mahalingam College</h3>
+                    <p>Bachelor of Computer Applications - 70%</p>
+                </div>
+                <div class="box">
+                    <h4>2020 - 2021</h4>
+                    <h3>Government Higher Secondary School</h3>
+                    <p>HSC State Board - 80.8%</p>
+                </div>
+                <div class="box">
+                    <h4>2018 - 2019</h4>
+                    <h3>Government High School</h3>
+                    <p>SSLC State Board - 78.8%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Internship -->
+        <div class="col">
+            <h2><span>I</span>nternship</h2>
+            <div class="contents">
+                <div class="box">
+                    <h4>Warehouse Internship (Oct 2023 - Nov 2023)</h4>
+                    <h3>Flipkart, Coimbatore</h3>
+                    <p>Completed a 45-day internship at Flipkart's warehouse, gaining hands-on experience in logistics, inventory management, and quality control. Assisted in stock processing while ensuring safety and accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section id="projects">
+    <div class="project-container">
+      <h2><span>My</span> Projects</h2>
+      <div class="project-grid">
+  
+        <!-- Project Card -->
+        <div class="project-card">
+          <img src="assets/Netflix project.png" alt="Project Title">
+          <div class="project-content">
+            <h3>Netflix Landing Page</h3>
+            <p>A short description of the project. Built with HTML, CSS, JS.</p>
+            <div class="project-links">
+              <a href="https://john1205n.github.io/Netflix/" target="_blank">Live Demo</a>
+              <a href="https://github.com/John1205N/Netflix" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Add more .project-card blocks as needed -->
+        <div class="project-card">
+            <img src="assets/Movie.png" alt="Project Title">
+            <div class="project-content">
+              <h3>Project Title</h3>
+              <p>A short description of the project. Built with HTML, CSS, JS.</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="p1.png" alt="Project Title">
+            <div class="project-content">
+              <h3>Project Title</h3>
+              <p>A short description of the project. Built with HTML, CSS, JS.</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Live Demo</a>
+                <a href="#" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+<section class="certification" id="certification">
+    <h1><span>C</span>ertifications</h1>
+    <div class="certification-container">
+        
+        <div class="cert-card" style="background-image: url('assets/certificate.jpg');">
+            <div class="cert-overlay">
+                <h2>Full Stack Web Development</h2>
+                <p>Issued by Coursera | 2024</p>
+                <a href="assets/" class="cert-btn" target="_blank">View Certificate</a>
+            </div>
+        </div>
+
+        <div class="cert-card" style="background-image: url('assets/certificate.jpg');">
+            <div class="cert-overlay">
+                <h2>Data Science & Machine Learning</h2>
+                <p>Issued by Udemy | 2023</p>
+                <a href="certificate2.jpg" class="cert-btn" target="_blank">View Certificate</a>
+            </div>
+        </div>
+
+        <div class="cert-card" style="background-image: url('assets/certificate.jpg');">
+            <div class="cert-overlay">
+                <h2>Cyber Security Fundamentals</h2>
+                <p>Issued by Google | 2022</p>
+                <a href="certificate3.jpg" class="cert-btn" target="_blank">View Certificate</a>
+            </div>
+        </div>
+        <div class="cert-card" style="background-image: url('certificate.jpg');">
+            <div class="cert-overlay">
+                <h2>Cyber Security Fundamentals</h2>
+                <p>Issued by Google | 2022</p>
+                <a href="certificate3.jpg" class="cert-btn" target="_blank">View Certificate</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h1><span>C</span>ontact Me</h1>
+    <div class="contact-container">
+        
+        <!-- Left: Contact Info -->
+        <div class="contact-info">
+            <h2>Let's Connect!</h2>
+            <p>If you have any projects or need assistance, feel free to reach out.</p>
+            
+            <div class="contact-details">
+                <p><i class="bx bx-envelope"></i> johnpeter3735@gmail.com</p>
+                <p><i class="bx bx-phone"></i> +91 81488 55286</p>
+                <p><i class="bx bx-map"></i> Coimbatore, Tamil Nadu</p>
+            </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form">
+            <form id="contact-form">
+                <input type="text" name="user_name" placeholder="Sanjana" required>
+                <input type="email" name="user_email" placeholder="sanjana@gmail.com" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+                
+            </form>
+        </div>
+          
+        
+</section>
+<!-- Include EmailJS -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("9KVmCQqOklfPZCoec"); // Your public key
+  })();
+
+  // Form submit listener
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_vni32pw", "template_xjrianf", this)
+      .then((response) => {
+        console.log("SUCCESS!", response);
+        alert("Message sent successfully!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        alert("Something went wrong. Please try again.");
+      });
+  });
+
+</script>
+
+  
+
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 John Samuel | Designed with passion</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const certCards = document.querySelectorAll(".cert-card");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fade-in");
+                } else {
+                    entry.target.classList.remove("fade-in"); // Removes class when out of view
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    certCards.forEach(card => observer.observe(card));
+});
+    </script>
+</body>
+</html>
