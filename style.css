@@ -1383,9 +1383,11 @@ footer {
   .project-content p {
     font-size: 0.95em;
     color: var(--text-color);
+    opacity: 0.8;
     margin-bottom: 15px;
     font-family: var(--button-font);
-    font-weight: 700;
+    font-weight: 500;
+    text-align: justify;
   }
   
   .project-links a {
